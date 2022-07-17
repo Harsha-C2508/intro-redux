@@ -49,15 +49,15 @@ class Store{
     }
 }
 export const store = createStore(reducer,{count:1})
-// new Store( {count:1}, fn)
-// store.subscribe(()=>{
-//     console.log("Store has get updated")
-//     console.log(store.state)
-// })
-// console.log(store.getState());
-// console.log(store.state)
+new Store( {count:1}, fn)
+store.subscribe(()=>{
+    console.log("Store has get updated")
+    console.log(store.state)
+})
+console.log(store.getState());
+console.log(store.state)
 
-// store.dispatch({ type:"INCREMENT_AMOUNT"})
-// console.log(store.state)
-// store.dispatch({ type:"DECREMENT_AMOUNT"})
-// console.log(store.state)
+store.dispatch({ type:"INCREMENT_AMOUNT"})
+console.log(store.state)
+store.dispatch({ type:"DECREMENT_AMOUNT"})
+console.log(store.state)
